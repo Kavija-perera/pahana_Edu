@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Pahana Edu Bookshop</title>
+    <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
