@@ -1,11 +1,11 @@
 package com.pahanaedu.model;
 
-public class item {
+public class Item {
     private String itemId;
     private String name;
     private double price;
 
-    public item (String itemId, String name, double price) {
+    public Item(String itemId, String name, double price) {
         this.itemId = itemId;
         this.name = name;
         this.price = price;
