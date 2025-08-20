@@ -1,17 +1,43 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="com.pahanaedu.util.Constants" %>
 <html>
 <head>
-    <title>Pahana Edu Bookshop</title>
-    <link rel="stylesheet" href="stylesheet.css">
-
+    <title>Welcome - Pahana Edu Bookshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>PAHANA EDU BOOKSHOP</h1>
-<form action="./dashbord.jsp" method="post">
-    <label>Username:</label>
-    <input type="text" name="username" required><br>
-    <label>Password:</label>
-    <input type="password" name="password" required><br>
-    <button type="submit" >Login</button>
-</form>
+    <div class="container">
+        <h2>Pahana Edu Bookshop</h2>
+        <c:choose>
+            <c:when test="${not empty sessionScope.user}">
+                <%
+                    response.sendRedirect("dashboard.jsp");
+                %>
+            </c:when>
+            <c:otherwise>
+                <%
+                    response.sendRedirect("login");
+                %>
+            </c:otherwise>
+        </c:choose>
+    </div>
 </body>
 </html>

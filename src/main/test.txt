@@ -1,0 +1,57 @@
+/PahanaEduBookshop
+├── /src
+│   ├── /main
+│   │   ├── /java
+│   │   │   ├── /com
+│   │   │   │   ├── /com.pahanaedu
+│   │   │   │   │   ├── /com.pahanaedu.config
+│   │   │   │   │   │   └── MongoDBConfig.java          # MongoDB connection setup
+│   │   │   │   │   ├── /com.pahanaedu.model
+│   │   │   │   │   │   ├── Customer.java               # Customer data com.pahanaedu.model
+│   │   │   │   │   │   ├── Item.java                   # Item data com.pahanaedu.model
+│   │   │   │   │   │   └── User.java                   # User com.pahanaedu.model for authentication
+│   │   │   │   │   ├── /dao
+│   │   │   │   │   │   ├── CustomerDAO.java            # Data access for customers
+│   │   │   │   │   │   ├── ItemDAO.java                # Data access for items
+│   │   │   │   │   │   └── UserDAO.java                # Data access for users
+│   │   │   │   │   ├── /service
+│   │   │   │   │   │   ├── CustomerService.java        # Business logic for customers
+│   │   │   │   │   │   ├── ItemService.java            # Business logic for items
+│   │   │   │   │   │   ├── AuthService.java            # Authentication logic
+│   │   │   │   │   │   └── BillingService.java         # Bill calculation logic
+│   │   │   │   │   ├── /servlet
+│   │   │   │   │   │   ├── LoginServlet.java           # Handles login requests
+│   │   │   │   │   │   ├── CustomerServlet.java        # Manages customer CRUD
+│   │   │   │   │   │   ├── ItemServlet.java            # Manages item CRUD
+│   │   │   │   │   │   ├── BillingServlet.java         # Handles bill generation
+│   │   │   │   │   │   └── HelpServlet.java            # Serves help content
+│   │   │   │   │   └── /util
+│   │   │   │   │       └── Constants.java              # Constants (e.g., MongoDB collection names)
+│   │   ├── /resources
+│   │   │   └── application.properties                  # Configuration (e.g., MongoDB URI)
+│   │   ├── /webapp
+│   │   │   ├── /WEB-INF
+│   │   │   │   ├── web.xml                            # Servlet configuration
+│   │   │   │   └── /views
+│   │   │   │       ├── login.jsp                      # Login page
+│   │   │   │       ├── dashboard.jsp                  # Main menu/dashboard
+│   │   │   │       ├── addCustomer.jsp                # Form to add new customer
+│   │   │   │       ├── editCustomer.jsp               # Form to edit customer
+│   │   │   │       ├── viewCustomer.jsp               # Display customer details
+│   │   │   │       ├── manageItems.jsp                # Add/update/delete items
+│   │   │   │       ├── billing.jsp                    # Bill calculation and display
+│   │   │   │       └── help.jsp                       # Help section content
+│   │   │   ├── /css
+│   │   │   │   └── style.css                          # CSS for styling JSP pages
+│   │   │   ├── /js
+│   │   │   │   └── script.js                          # JavaScript for client-side validation
+│   │   │   └── index.jsp                              # Landing page (redirects to login)
+│   ├── /test
+│   │   ├── /java
+│   │   │   └── /java
+│   │   │       ├── /com.pahanaedu
+│   │   │       │   ├── CustomerServiceTest.java       # Unit tests for customer service
+│   │   │       │   ├── ItemServiceTest.java           # Unit tests for item service
+│   │   │       │   └── AuthServiceTest.java           # Unit tests for authentication
+├── pom.xml                                            # Maven dependencies
+└── README.md                                          # Project documentation
